@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Unit Converter</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Links to the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+        <div>Loading... Please wait.</div>
+        <span class="spinner"></span>
+    </div>
+    
+    <div id="title-card">
+        <h1>Unit Converter</h1>
+        <h4>Select Unit:</h4>
+    </div>
+
+    <!-- Conversion selection dropdown menu-->
+    <select id="select-unit" onchange="handle_select()" autocomplete="off">
+        <option value="" disabled selected hidden>Select a conversion...</option>
+        <option value="Miles to Kilometers">Miles to Kilometers</option>
+        <option value="Kilometers to Miles">Kilometers to Miles</option>
+    </select>
+    <br>
+    <br>
+    <br>
+
+    <!-- Numeric input for user value -->
+    <input 
+        type="number"
+        placeholder="Enter number"
+        id="user-input"
+    >
+
+    <!-- Button to trigger conversion -->
+    <button 
+        id="convert-button"
+        onclick="convert()"
+        autocomplete="off"
+    >Convert</button>
+    
+    <!-- Output area for conversion results -->
+    <p id="output">Output...</p>
+
+    <!-- Links to the Javascript file -->
+    <script src="main.js"></script>
+</body>
+</html>
