@@ -34,7 +34,7 @@ function convert() {
     output.style.fontStyle = 'normal'
 
     if (selected_conversion === '') {
-        output.innerText = "You need to enter a conversion first!";
+        output.innerText = "You need to select a conversion first!";
         return;
     }
     else if (String(user_input_value) === '' || isNaN(user_input_value)) {
